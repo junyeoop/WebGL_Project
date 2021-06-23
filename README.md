@@ -59,7 +59,10 @@ gl.bindBuffer(gl.ARRAY_BUFFER, gl.vertexBuffer2);
 그 후 renderScene에서 vertexBuffer2를 bind하여 랜더링했습니다.
 
 
-*랜더링 결과
+* 랜더링 결과
+<!-- ![축_랜더링](/uploads/2e555ab72d894cf4c58fb9ba5d850d67/축_랜더링.PNG) -->
+<img src = "/uploads/2e555ab72d894cf4c58fb9ba5d850d67/축_랜더링.PNG" width="35%"> 
+<img src = "/uploads/6bd9bf3ccc70846d11d97fb9c3ddccef/큐브_랜더링.PNG" width="35%">
 
 
 ### 1. Interactive Cube
@@ -99,13 +102,21 @@ Interactive Cube란 사용자의 mouse event에 따라 큐브의 model 이동을
 	canvas.addEventListener("mouseout", Out, false);
 	canvas.addEventListener("mousemove", Move, false);
 ```
-마우스의 위치, 이동 등을 나타내는 eventListerner를 추가하였습니다. 
+마우스의 Up, Down, Out, 이동 event의 eventListerner를 추가하였습니다. 
+
+* 마우스 드래그 결과
+
 
 ### 2. Shading
 ----------
 ```sh
 Shading이란 ...
 ```
+
+* Shading 결과
+
+<img src = "/uploads/64b17ad779a72af53f35e83452076e0a/Shading_랜더링.PNG" width="35%">
+
 
 ## References
 본인의 Lab09를 기반으로 작성했고 아래와 같이 참고하였습니다.
