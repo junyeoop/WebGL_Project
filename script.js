@@ -94,10 +94,8 @@ function makeAxis(){
 		//z
 		0.0,0.0,-1.0, 0.0, 0.0, 1.0, 1.0,
 		0.0,0.0,1.0, 0.0, 0.0, 1.0, 1.0,
-
 	]
 	return (new Float32Array(vertexData2));
-
 }
 
 function initialiseBuffer() {
@@ -454,12 +452,9 @@ function renderScene() {
 	gl.enableVertexAttribArray(1);
 	gl.vertexAttribPointer(1, 4, gl.FLOAT, gl.FALSE, 28, 12);
 
-
-
 	if (!testGLError("gl.vertexAttribPointer")) {
 		return false;
 	}
-
 
 	gl.drawArrays(1, 0, 6);
 
