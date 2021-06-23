@@ -61,7 +61,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, gl.vertexBuffer2);
 
 * 랜더링 결과
 <img src = "/uploads/2e555ab72d894cf4c58fb9ba5d850d67/축_랜더링.PNG" width="350px" height="350px"> 
-<img src = "/uploads/6bd9bf3ccc70846d11d97fb9c3ddccef/큐브_랜더링.PNG" width="350px" height="350px">
+<img src = "/uploads/6bd9bf3ccc70846d11d97fb9c3ddccef/큐브_랜더링.PNG" width="450px" height="350px">
 
 * Rotate 랜더링 결과
 <img src = "/uploads/2efff9c2b396b732b6a11cff95d195b2/RotateX.gif" width="350px" height="350px">
@@ -120,7 +120,10 @@ Shading이란 ...
 
 * Shading 결과
 
-<img src = "/uploads/64b17ad779a72af53f35e83452076e0a/Shading_랜더링.PNG" width="350px" height="350px">
+<img src = "/uploads/64b17ad779a72af53f35e83452076e0a/Shading_랜더링.PNG" width="450px" height="350px">
+<img src = "/uploads/91c063e6c5d384527ff3340ab143868a/Shading.gif" width="350px" height="350px">
+
+
 
 
 ## References
