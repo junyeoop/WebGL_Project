@@ -107,7 +107,7 @@ script.js에 initialEvent라는 function을 정의해주고, function 안에 다
 	canvas.addEventListener("mouseout", Out, false);
 	canvas.addEventListener("mousemove", Move, false);
 ```
-마우스의 Up, Down, Out, 이동 event의 eventListerner를 추가하였습니다. 
+마우스의 Up, Down, Out, 이동 event의 eventListener를 추가하였습니다. 
 
 * 마우스 드래그 결과
 <img src = "/uploads/c3ef997becc679b4c3f499cfc6713ad4/Drag.gif" width="350px" height="350px">
