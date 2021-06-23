@@ -13,7 +13,7 @@ Final Project
 ```
 ## Introduction
 
-실습을 하며 느낀 불편함을 바탕으로 이번 프로젝트를 진행하게되었습니다.
+실습을 하며 느낀 불편함을 바탕으로 이번 프로젝트를 진행하게 되었습니다.
 큐브를 toggleAnimation으로 특정 방향으로만 Rotate하는 것은 랜더링된 결과를 확인하는데 충분하지 못했습니다. 특히 Shading의 경우 결과 확인이 가장 아쉬웠습니다. 따라서 마우스 드래그를 이용하여 큐브 Model을 rotate할 수 있도록 프로젝트를 만들었습니다. 또한, X, Y, Z축을 추가하여 큐브를 볼 때 큐브가 어떤 축을 기준으로 움직이는지 확인할 수 있도록 만들었습니다.
 
 
@@ -25,7 +25,7 @@ Final Project
 
 
 ### 1. Axis
-큐브의 기준 축을 알 수 있도록 x, y, z축을 추가로 랜더링했습니다.
+큐브의 기준 축을 알 수 있도록 x, y, z축을 추가로 랜더링 했습니다.
 ```sh
 function makeAxis(){
 	let vertexData2 = [
@@ -56,7 +56,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, gl.vertexBuffer2);
 
 	gl.drawArrays(1, 0, 6);
 ```
-그 후 renderScene에서 vertexBuffer2를 bind하여 랜더링했습니다.
+그 후 renderScene에서 vertexBuffer2를 bind하여 랜더링 했습니다.
 
 
 * 랜더링 결과
@@ -119,10 +119,12 @@ Move evnetListener는 원래의 좌표에서 마우스로 이동한 좌표의 �
 
 ### 3. Shading
 ----------
-```sh
+
 Shading에는 FragmentShader에서 일어나는 PhonShading과, VertexShader에서 일어나는 GouraudShading이 존재합니다.
-PhongShading은 모든 픽셀에 대해 계산해야 합니다. 따라서 GouraudShading에 비해 랜더링 성능이 높지만 계산량이 많아 속도가 느립니다. GouraudShading의 경우, 삼각형을 잘게 쪼갠다면 랜더링 성능을 높일 수 있지만, 큐브를 만들 때 2개의 삼각형으로 한 면을 구성하기 때문에 랜더링 성능을 높일 수 없었습니다. Shading 효과를 눈으로 확인하기 위해서는 세밀한 랜더링이 필요하다고 생각하여 GouraudShading 대신 PhonShading을 선택하여 프로젝트를 진행했습니다.
-```
+PhongShading은 모든 픽셀에 대해 계산해야 합니다. 따라서 GouraudShading에 비해 랜더링 성능이 높지만 계산량이 많아 속도가 느립니다. 
+
+GouraudShading의 경우, 삼각형을 잘게 쪼갠다면 랜더링 성능을 높일 수 있지만, 큐브를 만들 때 2개의 삼각형으로 한 면을 구성하기 때문에 랜더링 성능을 높일 수 없었습니다. Shading 효과를 눈으로 확인하기 위해서는 세밀한 랜더링이 필요하다고 생각하여 GouraudShading 대신 PhonShading을 선택하여 프로젝트를 진행했습니다.
+
 
 
 * Shading 결과
