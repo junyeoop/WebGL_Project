@@ -73,7 +73,8 @@ gl.bindBuffer(gl.ARRAY_BUFFER, gl.vertexBuffer2);
 -----------
 * evnetListener 생성
 
-Interactive Cube란 사용자의 mouse event에 따라 큐브의 model 이동을이 이동하는 것을 의미합니다.
+Interactive Cube란 사용자의 mouse event에 따라 model transform 하는 큐브를 의미합니다.
+script.js에 initialEvent라는 function을 정의해주고, function 안에 다음과 같은 eventListener를 정의합니다.
 ```sh
 	var Down = function(event) {
 		console.log("Down");
