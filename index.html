@@ -2,41 +2,94 @@
 
 <head>
 	<title>WebGL1.0 Tutorial Lab 08 - Culling</title>
-	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<script type="text/javascript" src="gl-matrix.js"> </script>
 	<script type="text/javascript" src="script.js"> </script>
 
 </head>
 
-<body style="background-color:black;color:white;" onload="main()">
-<canvas id="helloapicanvas" style="border: none;" width="800" height="600"></canvas>
+<body style="background-color:#2b2b2b; color:white;" onload="main()">
 
-<br/> <br/>
-<button onclick="toggleAnimation()">Toggle Animation</button>
-<button onclick="speed_scale(1.1)"> + </button>
-<button onclick="speed_scale(0.9)"> - </button>
-<button onclick="fn_draw_mode(2)"> Lines </button>
-<button onclick="fn_draw_mode(4)"> Triangles </button>
-<button onclick="fn_draw_mode(0)"> Points </button>
-<p>
-	FOV :
-	<input style="width:500px" id="fov_range" type="range" min="10" max="170" value="90" oninput="fn_update_fov(this.value);">
-	<input style="width:50px" type="text" id="textFOV" value="90">
-</body>
 
-<br/><hr style="width:800px" align="left">
-<input type="checkbox" onclick="rotateToggle()"><label>Rotate axis :</label>
-<input name="axis" type="radio" onclick="rotateAxis(1)"><label>X </label>
-<input name="axis" type="radio" onclick="rotateAxis(2)"><label>Y </label>
-<input name="axis" type="radio" onclick="rotateAxis(3)"><label>Z </label>
-<input name="axis" type="radio" onclick="rotateAxis(4)"><label>NO Ratation </label>
-<br/><hr style="width:800px" align="left">
-<label>Light Position (-4 ~ 4) : </label>
-<label> X </label><input style="width:150px" type="range" min="-100" max="100" value="0" oninput="light_posx = this.value/25 ;">
-<label> Y </label><input style="width:150px" type="range" min="-100" max="100" value="0" oninput="light_posy = this.value/25 ;">
-<label> Z </label><input style="width:150px" type="range" min="-100" max="100" value="0" oninput="light_posz = this.value/25 ;">
-<br/><hr style="width:800px" align="left">
 
+
+<div style="display:flex;" >
+
+	<div>
+		<canvas id="helloapicanvas" style="border: none; " width="800px" height="600px"></canvas>
+		<!--<button onclick="toggleAnimation()">Toggle Animation</button>-->
+		<br/>
+		<br/>
+		<label> Rotation speed : </label>
+		<button onclick="speed_scale(1.1)"> + </button>
+		<button onclick="speed_scale(0.9)"> - </button>
+		<label style="margin-left:340px"> Draw mode : </label>
+		<button onclick="fn_draw_mode(2)"> Lines </button>
+		<button onclick="fn_draw_mode(4)"> Triangles </button>
+		<button onclick="fn_draw_mode(0)"> Points </button>
+		<hr>
+		<p>
+			FOV :
+			<input style="width:500px" id="fov_range" type="range" min="10" max="170" value="90" oninput="fn_update_fov(this.value);">
+			<input style="width:50px" type="text" id="textFOV" value="90">
+		<br/><hr style="width:800px" align="left">
+		<input type="checkbox" onclick="rotateToggle()"><label>Rotate :</label>
+		<input name="axis" type="radio" onclick="rotateAxis(1)"><label>X-axis </label>
+		<input name="axis" type="radio" onclick="rotateAxis(2)"><label>Y-axis </label>
+		<input name="axis" type="radio" onclick="rotateAxis(3)"><label>Z-axis </label>
+		<input name="axis" type="radio" onclick="rotateAxis(4)" checked><label>STOP </label>
+		<br/><hr style="width:800px" align="left">
+		<label>Light Position (-4 ~ 4) : </label>
+		<label> X </label><input style="width:150px" type="range" min="-100" max="100" value="0" oninput="light_posx = this.value/25 ;">
+		<label> Y </label><input style="width:150px" type="range" min="-100" max="100" value="0" oninput="light_posy = this.value/25 ;">
+		<label> Z </label><input style="width:150px" type="range" min="-100" max="100" value="0" oninput="light_posz = this.value/25 ;">
+		<br/><hr style="width:800px" align="left">
+
+	</div>
+	<div style="background-color:#2b2b2b; border-color: #1a79cd; margin-left: 5%; font-size: 15px" >
+		<h3>Cube 설명 </h3>
+		<p>
+			Front : <label style= "color:cornflowerblue">Blue</label>,
+			Back : <label style= "color:red">Red</label>,
+			Left: <label style= "color:green">Green</label>,
+			Right: <label style= "color:yellow">Yellow</label>,
+			Top: <label style= "color:cyan">Cyan</label>,
+			Bottom: <label style= "color:magenta">Magenta</label>
+		</p>
+		<p>X-axis : <label style= "color:red">Red</label>,
+			Y-axis : <label style= "color:green">Green</label>,
+			Z-Axis : <label style= "color:cornflowerblue">Blue</label>
+		</p>
+		<br><hr>
+
+		<h3>Rotation speed </h3>
+		<p> Rotation speed의 + / - 버튼을 눌러 회전 속도를 조절해보세요.</p>
+		<br><hr>
+
+		<h3>Draw mode</h3>
+		<p> Lines / Triangles / Points 중 하나를 선택하여, drawArrays 옵션을 바꿀 수 있어요.</p>
+		<p>(default : Triangles)</p>
+		<br><hr>
+
+		<h3>FOV </h3>
+		<p> Bar를 좌우로 조절하여 FOV의 값을 조절할 수 있어요.</p>
+		<br><hr>
+
+		<h3>Rotate </h3>
+		<p> Rotate 버튼을 클릭하여 큐브를 특정 축을 기준으로 회전시킬 수 있어요.</p>
+		<p> X, Y, Z 축 중 하나를 기준 축으로 설정할 수 있어요.</p>
+		<p> STOP을 눌러 회전을 멈출 수 있어요.</p>
+		<h4 style="color:red"> 주의 ! 축 회전과 마우스 드래그를 동시에 사용하면 Model Transform이 2번 되기 때문에 설정한 축 기준으로 회전하지 않아요.</h4>
+		<br><hr>
+
+		<h3>Light Position </h3>
+		<p> 광원의 X, Y, Z 위치를 조절할 수 있어요. </p>
+
+
+
+
+	</div>
+</div>
 <!--<br/><hr>-->
 <!--<input type="checkbox" onclick="flag_draw_twice ^= 1;"><label>Draw One more box | Position : </label>-->
 <!--<label> X </label><input id="twice_x" type="text" size="4" value="0.2">-->
@@ -45,5 +98,5 @@
 <!--<button onclick="fn_twice_position()">Set</button>-->
 <!--<br/>-->
 
-
+</body>
 </html>
