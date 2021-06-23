@@ -21,21 +21,21 @@
 <p>
 	FOV :
 	<input style="width:500px" id="fov_range" type="range" min="10" max="170" value="90" oninput="fn_update_fov(this.value);">
-	<input type="text" id="textFOV" value="90">
+	<input style="width:50px" type="text" id="textFOV" value="90">
 </body>
 
-<br/><hr>
+<br/><hr style="width:800px" align="left">
 <input type="checkbox" onclick="rotateToggle()"><label>Rotate axis :</label>
 <input name="axis" type="radio" onclick="rotateAxis(1)"><label>X </label>
 <input name="axis" type="radio" onclick="rotateAxis(2)"><label>Y </label>
 <input name="axis" type="radio" onclick="rotateAxis(3)"><label>Z </label>
 <input name="axis" type="radio" onclick="rotateAxis(4)"><label>NO Ratation </label>
-<br/><hr>
-<label>Light Position X,Y,Z (-4 ~ +4)</label>
-<input style="width:200px" type="range" min="-100" max="100" value="0" oninput="light_posx = this.value/25 ;">
-<input style="width:200px" type="range" min="-100" max="100" value="0" oninput="light_posy = this.value/25 ;">
-<input style="width:200px" type="range" min="-100" max="100" value="0" oninput="light_posz = this.value/25 ;">
-<br/><hr>
+<br/><hr style="width:800px" align="left">
+<label>Light Position (-4 ~ 4) : </label>
+<label> X </label><input style="width:150px" type="range" min="-100" max="100" value="0" oninput="light_posx = this.value/25 ;">
+<label> Y </label><input style="width:150px" type="range" min="-100" max="100" value="0" oninput="light_posy = this.value/25 ;">
+<label> Z </label><input style="width:150px" type="range" min="-100" max="100" value="0" oninput="light_posz = this.value/25 ;">
+<br/><hr style="width:800px" align="left">
 
 <!--<br/><hr>-->
 <!--<input type="checkbox" onclick="flag_draw_twice ^= 1;"><label>Draw One more box | Position : </label>-->
