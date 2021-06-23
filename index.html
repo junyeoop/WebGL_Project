@@ -1,0 +1,49 @@
+<html>
+
+<head>
+	<title>WebGL1.0 Tutorial Lab 08 - Culling</title>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+	<script type="text/javascript" src="gl-matrix.js"> </script>
+	<script type="text/javascript" src="WebGL_Tutorial.js"> </script>
+
+</head>
+
+<body style="background-color:black;color:white;" onload="main()">
+<canvas id="helloapicanvas" style="border: none;" width="800" height="600"></canvas>
+
+<br/> <br/>
+<button onclick="toggleAnimation()">Toggle Animation</button>
+<button onclick="speed_scale(1.1)"> + </button>
+<button onclick="speed_scale(0.9)"> - </button>
+<button onclick="fn_draw_mode(2)"> Lines </button>
+<button onclick="fn_draw_mode(4)"> Triangles </button>
+<button onclick="fn_draw_mode(0)"> Points </button>
+<p>
+	FOV :
+	<input style="width:500px" id="fov_range" type="range" min="10" max="170" value="90" oninput="fn_update_fov(this.value);">
+	<input type="text" id="textFOV" value="90">
+</body>
+
+<br/><hr>
+<input type="checkbox" onclick="rotateToggle()"><label>Rotate axis :</label>
+<input name="axis" type="radio" onclick="rotateAxis(1)"><label>X </label>
+<input name="axis" type="radio" onclick="rotateAxis(2)"><label>Y </label>
+<input name="axis" type="radio" onclick="rotateAxis(3)"><label>Z </label>
+<input name="axis" type="radio" onclick="rotateAxis(4)"><label>NO Ratation </label>
+<br/><hr>
+<label>Light Position X,Y,Z (-4 ~ +4)</label>
+<input style="width:200px" type="range" min="-100" max="100" value="0" oninput="light_posx = this.value/25 ;">
+<input style="width:200px" type="range" min="-100" max="100" value="0" oninput="light_posy = this.value/25 ;">
+<input style="width:200px" type="range" min="-100" max="100" value="0" oninput="light_posz = this.value/25 ;">
+<br/><hr>
+
+<!--<br/><hr>-->
+<!--<input type="checkbox" onclick="flag_draw_twice ^= 1;"><label>Draw One more box | Position : </label>-->
+<!--<label> X </label><input id="twice_x" type="text" size="4" value="0.2">-->
+<!--<label> Y </label><input id="twice_y" type="text" size="4" value="0.2">-->
+<!--<label> Z </label><input id="twice_z" type="text" size="4" value="0.2">-->
+<!--<button onclick="fn_twice_position()">Set</button>-->
+<!--<br/>-->
+
+
+</html>
