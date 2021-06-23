@@ -24,8 +24,8 @@ Final Project
 * Shading을 이해할 수 있다.
 
 
-### 0. Axis
-먼저 큐브의 기준 축을 알 수 있도록 x, y, z축을 추가로 랜더링했습니다.
+### 1. Axis
+큐브의 기준 축을 알 수 있도록 x, y, z축을 추가로 랜더링했습니다.
 ```sh
 function makeAxis(){
 	let vertexData2 = [
@@ -69,7 +69,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, gl.vertexBuffer2);
 <img src = "/uploads/2142f32cedbca1429e682ac3bfe34aa4/RotateZ.gif" width="350px" height="350px">
 
 
-### 1. Interactive Cube
+### 2. Interactive Cube
 -----------
 * evnetListener 생성
 
@@ -117,7 +117,7 @@ Move evnetListener는 원래의 좌표에서 마우스로 이동한 좌표의 �
 <img src = "/uploads/c3ef997becc679b4c3f499cfc6713ad4/Drag.gif" width="350px" height="350px">
 
 
-### 2. Shading
+### 3. Shading
 ----------
 ```sh
 Shading에는 FragmentShader에서 일어나는 PhonShading과, VertexShader에서 일어나는 GouraudShading이 존재합니다.
