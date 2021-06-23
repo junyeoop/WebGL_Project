@@ -109,6 +109,7 @@ Interactive Cube란 사용자의 mouse event에 따라 큐브의 model 이동을
 마우스의 Up, Down, Out, 이동 event의 eventListerner를 추가하였습니다. 
 
 * 마우스 드래그 결과
+<img src = "/uploads/c3ef997becc679b4c3f499cfc6713ad4/Drag.gif" width="350px" height="350px">
 
 
 ### 2. Shading
@@ -123,7 +124,7 @@ Shading이란 ...
 
 
 ## References
-본인의 Lab09를 기반으로 작성했고 아래와 같이 참고하였습니다.
+본인의 Lab09를 기반으로 작성했고, 아래와 같이 참고하였습니다.
 
 * 2020 프로젝트, 201721097 : https://git.ajou.ac.kr/hwan/webgl-tutorial/-/tree/master/student2020/better_project/201721097
 * https://www.tutorialspoint.com/webgl/webgl_interactive_cube.htm
