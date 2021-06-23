@@ -107,17 +107,23 @@ script.js에 initialEvent라는 function을 정의해주고, function 안에 다
 	canvas.addEventListener("mouseout", Out, false);
 	canvas.addEventListener("mousemove", Move, false);
 ```
-마우스의 Up, Down, Out, 이동 event의 eventListener를 추가하였습니다. 
+Move evnetListener는 원래의 좌표에서 마우스로 이동한 좌표의 차이를 gap 변수에 저장합니다. 저장된 gap만큼 x, y축에 맞추어 renderScene에서 rotate 시켜줍니다.
 
-* 마우스 드래그 결과
+
+
+
+
+* Interactive Cube 결과
 <img src = "/uploads/c3ef997becc679b4c3f499cfc6713ad4/Drag.gif" width="350px" height="350px">
 
 
 ### 2. Shading
 ----------
 ```sh
-Shading이란 ...
+Shading에는 FragmentShader에서 일어나는 PhonShading과, VertexShader에서 일어나는 GouraudShading이 존재합니다.
+PhongShading은 모든 픽셀에 대해 계산해야 합니다. 따라서 GouraudShading에 비해 랜더링 성능이 높지만 계산량이 많아 속도가 느립니다. GouraudShading의 경우, 삼각형을 잘게 쪼갠다면 랜더링 성능을 높일 수 있지만, 큐브를 만들 때 2개의 삼각형으로 한 면을 구성하기 때문에 랜더링 성능을 높일 수 없었습니다. Shading 효과를 눈으로 확인하기 위해서는 세밀한 랜더링이 필요하다고 생각하여 GouraudShading 대신 PhonShading을 선택하여 프로젝트를 진행했습니다.
 ```
+
 
 * Shading 결과
 
