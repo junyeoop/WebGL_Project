@@ -318,14 +318,6 @@ let xRot_2 = 0.0;
 let yRot_2 = 0.0;
 let zRot_2 = 0.0;
 
-let xRot_3 = 0.0;
-let yRot_3 = 0.0;
-let zRot_3 = 0.0;
-
-let xRot_4 = 0.0;
-let yRot_4 = 0.0;
-let zRot_4 = 0.0;
-
 let x_rad = 0;
 let y_rad = 0;
 let light_posx = 0.0;
@@ -364,52 +356,46 @@ function renderScene() {
 	}
 
 	mat4.rotateX(mMat, mMat, xRot_2);
-	mat4.rotateY(mMat, mMat, yRot_3);
-	mat4.rotateZ(mMat, mMat, zRot_4);
+	mat4.rotateY(mMat, mMat, yRot_2);
+	mat4.rotateZ(mMat, mMat, zRot_2);
 
-	let x_count=0;
-	let y_count=0;
-	let z_count=0;
+
 // X Axis
 	if (rotate_flag == 1 && axis_flag == 1){
 		console.log("axis_flag =",axis_flag);
-		x_count++;
 		xRot_2 += speedRot;
-		yRot_3 = 0;
-		zRot_4 = 0;
-		// console.log("xRot =",xRot,"yRot =",yRot,"zRot=",zRot);
+		yRot_2 = 0;
+		zRot_2 = 0;
 		console.log("xRot =",xRot_2,"yRot =",yRot_2,"zRot=",zRot_2);
 
 	}
 	// Y Axis
 	else if (rotate_flag == 1 && axis_flag == 2){
-		y_count++;
-		yRot_3 = yRot_3 + speedRot;
+		yRot_2 += speedRot;
 		xRot_2 = 0;
-		zRot_4 = 0;
+		zRot_2 = 0;
 		console.log("xRot =",xRot_2,"yRot =",yRot_2,"zRot=",zRot_2);
 
 	}
 	// Z Axis
 	else if (rotate_flag == 1 && axis_flag == 3){
-		z_count++;
-		zRot_4 = zRot_4 + speedRot;
+		zRot_2 += speedRot;
 		xRot_2 = 0;
-		yRot_3 = 0;
+		yRot_2 = 0;
 		console.log("xRot =",xRot_2,"yRot =",yRot_2,"zRot=",zRot_2);
 
 	}
-	// STOP
+	// Restore
 	else if (rotate_flag == 1 && axis_flag == 4){
 		xRot= 0;
 		yRot= 0;
 		zRot = 0;
-		// xRot_2 -= (speedRot * x_count);
-		// yRot_2 = (speedRot * y_count);
-		// zRot_2 = (speedRot * z_count);
-		x_count = 0;
-		y_count = 0;
-		z_count = 0;
+		xRot_2 = 0;
+		yRot_2 = 0;
+		zRot_2 = 0;
+		x_rad =0;
+		y_rad =0;
+
 		console.log("xRot =",xRot,"yRot =",yRot,"zRot=",zRot);
 	}
 
