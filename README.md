@@ -60,13 +60,14 @@ gl.bindBuffer(gl.ARRAY_BUFFER, gl.vertexBuffer2);
 
 
 * 랜더링 결과
-<img src = "/uploads/2e555ab72d894cf4c58fb9ba5d850d67/축_랜더링.PNG" width="350px" height="350px"> 
-<img src = "/uploads/6bd9bf3ccc70846d11d97fb9c3ddccef/큐브_랜더링.PNG" width="450px" height="350px">
+
+
+<img src = "https://user-images.githubusercontent.com/55452516/123620712-7c055780-d845-11eb-91bf-e52c440f0270.PNG" width="400px" height="350px"> <img src = "https://user-images.githubusercontent.com/55452516/123620778-8a537380-d845-11eb-96d9-4268e2999880.PNG" width="400px" height="350px">
 
 * Rotate 랜더링 결과
-<img src = "/uploads/2efff9c2b396b732b6a11cff95d195b2/RotateX.gif" width="350px" height="350px">
-<img src = "/uploads/7220bdced3e2f420531bb95e0fef0a75/RotateY.gif" width="350px" height="350px">
-<img src = "/uploads/2142f32cedbca1429e682ac3bfe34aa4/RotateZ.gif" width="350px" height="350px">
+
+
+<img src = "https://user-images.githubusercontent.com/55452516/123620816-950e0880-d845-11eb-92f6-0466353ce294.gif" width="315px" height="315px"> <img src = "https://user-images.githubusercontent.com/55452516/123620845-9d664380-d845-11eb-8013-93c27b92bf45.gif" width="315px" height="315px"> <img src = "https://user-images.githubusercontent.com/55452516/123621040-c8e92e00-d845-11eb-87a1-d615fd91358a.gif" width="315px" height="315px">
 
 
 ### 2. Interactive Cube
@@ -114,7 +115,7 @@ Move evnetListener는 원래의 좌표에서 마우스로 이동한 좌표의 �
 
 
 * Interactive Cube 결과
-<img src = "/uploads/c3ef997becc679b4c3f499cfc6713ad4/Drag.gif" width="350px" height="350px">
+<img src = "https://user-images.githubusercontent.com/55452516/123621345-11085080-d846-11eb-91e0-d3e0e8f3a052.gif" width="350px" height="350px">
 
 
 ### 3. Shading
@@ -129,8 +130,8 @@ GouraudShading의 경우, 삼각형을 잘게 쪼갠다면 랜더링 성능을 �
 
 * Shading 결과
 
-<img src = "/uploads/64b17ad779a72af53f35e83452076e0a/Shading_랜더링.PNG" width="450px" height="350px">
-<img src = "/uploads/91c063e6c5d384527ff3340ab143868a/Shading.gif" width="350px" height="350px">
+
+<img src = "https://user-images.githubusercontent.com/55452516/123621391-1c5b7c00-d846-11eb-8d29-4a8aa253f6f9.PNG" width="400px" height="350px"> <img src = "https://user-images.githubusercontent.com/55452516/123621429-25e4e400-d846-11eb-963d-b1155b6efda6.gif" width="350px" height="350px">
 
 
 
